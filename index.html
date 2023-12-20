@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>GSAP ScrollTrigger and Three.js Camera Movement</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+  <style>
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+    }
+
+    .canvas-container {
+      position: fixed;
+      top: 0%;
+      left: 0%;
+      width: 100vw;
+      height: 100vh;
+      z-index: 1;
+    }
+
+    .page {
+      position: relative;
+      z-index: 2;
+    }
+
+    .page2 {
+      position: relative;
+      z-index: 2;
+      height: 100vh;
+      width: 100%;
+      background: #000;
+    }
+
+    .section {
+      width: 100%;
+      height: 100vh;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <div class="canvas-container"></div>
+  </div>
+  <div class="page">
+    <div class="section section-one">
+      <h1>Section one</h1>
+      <img class="light__img" src="./images/light.svg" alt="">
+      <div class="title">
+        <p>BI-FUNCTIONAL LED <br><span class="red-title">projector headlamp</span></p>
+      </div>
+    </div>
+    <div class="section section-two">
+      <h1>Section two</h1>
+      <div class="title">
+        <p>best-in-class telescopic <br><span class="red-title">front suspension</span></p>
+      </div>
+    </div>
+    <div class="section section-three">
+      <h1>Section three</h1>
+      <div class="title">
+        <p>Dual channel ABS ensures <br><span class="red-title">wheels do not lock</span></p>
+      </div>
+    </div>
+    <div class="section section-four">
+      <h1>Section four</h1>
+      <div class="title">
+        <p>Best In Class Braking Technology <br><span class="red-title">
+            the power of precision braking</span></p>
+      </div>
+    </div>
+    <div class="section section-five">
+      <h1>section five</h1>
+    </div>
+    <div class="section section-six">
+      <h1>section six</h1>
+    </div>
+  </div>
+  <div class="page2">
+    <h1 class="intro-title" style="color: white">
+      The New Bajaj Pulsar N160
+    </h1>
+    <video id="desktopVideo" src="/videos/bike-video2.mp4" preload="auto"></video>
+  </div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/three@0.146.0/examples/js/loaders/GLTFLoader.js"></script>
+  <script src="https://unpkg.com/three@0.157.0/build/three.min.js"></script>
+  <script src="https://unpkg.com/three@0.146.0/examples/js/loaders/GLTFLoader.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"
+    integrity="sha256-2p2tRZlPowp3P/04Pw2rqVCSbhyV/IB7ZEVUglrDS/c=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.js"
+    integrity="sha256-peenofh8a9TIqKdPKIeQE7mJvuwh+J0To7nslvpj1jI=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.js"
+    integrity="sha256-31FC/OT6XpfjAhj9FuXjw5/wPXXawCAjJQ29E23/XPk=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"
+    integrity="sha256-lPE3wjN2a7ABWHbGz7+MKBJaykyzqCbU96BJWjio86U=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/1.6/modernizr.min.js"
+    integrity="sha512-l7H2vhcDo3XqtTaAZbMryonEG3XTGQDTKl7lZOmeyR4MVkSBKfvaghEhGLDficNaPNlC01EyCmxeBvRXBvlA6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="/script.js"></script>
+</body>
+
+</html>
